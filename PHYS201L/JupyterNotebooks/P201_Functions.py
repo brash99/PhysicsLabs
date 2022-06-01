@@ -7,6 +7,126 @@ reg = linear_model.LinearRegression()
 
 from scipy.optimize import curve_fit
 
+def constantfitfunction(x,*paramlist):
+    return paramlist[0]
+
+def constant_fit_plot_core(xi,yi,labelstring="Constant Fit",linestring="r-",plot_name=plt):
+    
+    linestring2 = linestring+"-"
+    
+    init_vals = [0.0 for x in range(1)]
+    popt, pcov = curve_fit(constantfitfunction,xi,yi,p0=init_vals)
+    perr = np.sqrt(np.diag(pcov))
+
+    ps = np.random.multivariate_normal(popt,pcov,10000)
+    ysample=np.asarray([constantfitfunction(xi,*pi) for pi in ps])
+
+    lower = np.percentile(ysample,2.5,axis=0)
+    upper = np.percentile(ysample,97.5,axis=0)
+    middle = (lower+upper)/2.0
+
+    print("%s: Coefficients (from curve_fit)" % labelstring)
+    print (popt)
+    print("%s: Covariance Matrix (from curve_fit)" % labelstring)
+    print (pcov)
+
+    print()
+    print ("%s: Final Result: y = (%0.5f +/- %0.5f)" % (labelstring,popt[0],perr[0]))
+    print()
+
+    #plt.plot(xi,yi,'o')
+
+    plot_name.plot(xi,middle,linestring,label=labelstring,linewidth=1)
+    plot_name.plot(xi,lower,linestring2,linewidth=1)
+    plot_name.plot(xi,upper,linestring2,linewidth=1)
+
+    return popt[0],perr[0]
+
+def constant_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-"):
+    if x_low=="":
+        # Takes the x and y values to make a trendline
+        intercept,dintercept = constant_fit_plot_core(xi,yi,labelstring,linestring)
+        return intercept,dintercept
+    else:
+        if x_high=="":
+            print ('Missing x_high parameter!!')
+            return -1000,-1000
+        else:
+            x_data_cut = []
+            y_data_cut = []
+            for i in range(len(xi)):
+                if xi[i]>=float(x_low) and xi[i]<=float(x_high):
+                    x_data_cut.append(xi[i])
+                    y_data_cut.append(yi[i])
+            x_data_cut = np.array(x_data_cut)
+            y_data_cut = np.array(y_data_cut)
+            # Takes the x and y values to make a trendline
+            intercept,dintercept = constant_fit_plot_core(x_data_cut,y_data_cut,labelstring,linestring,plot_name)
+            return intercept,dintercept
+        
+def constant_fit_plot_errors_core(xi,yi,sigmai,labelstring="Constant Fit",linestring="r-",plot_name=plt):
+
+    linestring2 = linestring+"-"
+    
+    init_vals = [0.0 for x in range(1)]
+    popt, pcov = curve_fit(constantfitfunction,xi,yi,p0=init_vals,sigma=sigmai)
+    perr = np.sqrt(np.diag(pcov))
+
+    ps = np.random.multivariate_normal(popt,pcov,100)
+    ysample=np.asarray([constantfitfunction(xi,*pi) for pi in ps])
+    
+    #print(ps,ysample)
+
+    lowerc = np.percentile(ysample,2.5,axis=0)
+    upperc = np.percentile(ysample,97.5,axis=0)
+    middlec = (lowerc+upperc)/2.0
+    
+    lower = [lowerc for i in range(len(xi))]
+    upper = [upperc for i in range(len(xi))]
+    middle = [middlec for i in range(len(xi))]
+
+    print("%s: Coefficients (from curve_fit)" % labelstring)
+    print (popt)
+    print("%s: Covariance Matrix (from curve_fit)" % labelstring)
+    print (pcov)
+
+    print()
+    print ("%s: Final Result: y = (%0.5f +/- %0.5f)" % (labelstring,popt[0],perr[0]))
+    print()
+
+    #plt.plot(xi,yi,'o')
+
+    plot_name.plot(xi,middle,linestring,label=labelstring,linewidth=1)
+    plot_name.plot(xi,lower,linestring2,linewidth=1)
+    plot_name.plot(xi,upper,linestring2,linewidth=1)
+
+    return popt[0],perr[0]
+
+def constant_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-"):
+    if x_low=="":
+        # Takes the x and y values to make a trendline
+        intercept,dintercept = constant_fit_plot_errors_core(xi,yi,sigmai,labelstring,linestring)
+        return intercept,dintercept
+    else:
+        if x_high=="":
+            print ('Missing x_high parameter!!')
+            return -1000,-1000
+        else:
+            x_data_cut = []
+            y_data_cut = []
+            sigmai_cut = []
+            for i in range(len(xi)):
+                if xi[i]>=float(x_low) and xi[i]<=float(x_high):
+                    x_data_cut.append(xi[i])
+                    y_data_cut.append(yi[i])
+                    sigmai_cut.append(sigmai[i])
+            x_data_cut = np.array(x_data_cut)
+            y_data_cut = np.array(y_data_cut)
+            sigmai_cut = np.array(sigmai_cut)
+            # Takes the x and y values to make a trendline
+            intercept,dintercept = constant_fit_plot_errors_core(x_data_cut,y_data_cut,sigmai_cut,labelstring,linestring,plot_name)
+            return intercept,dintercept
+
 def linearfitfunction(x,*paramlist):
     return paramlist[0]+paramlist[1]*x
 
