@@ -354,6 +354,39 @@ def quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstr
             # Takes the x and y values to make a trendline
             a,b,c,da,db,dc = quadratic_fit_plot_errors_core(x_data_cut,y_data_cut,sigmai_cut,labelstring,linestring,plot_name)
             return a,b,c,da,db,dc
+        
+def weighted_average(x,deltax,etype):
+    
+    if (etype == 1):
+        w = 1/deltax
+    else:
+        w = 1/deltax**2
+    
+    # calculate the statistically weighted average of density
+    sq_sum1 = 0.0
+    sq_sum2 = 0.0
+    sq_sum3 = 0.0
+    sq_sum4 = 0.0
+    sq_sum5 = 0.0
+    
+    for i in range(len(x)):
+        sq_sum1 = sq_sum1 + w[i]*x[i]
+        sq_sum2 = sq_sum2 + w[i]
+        sq_sum3 = sq_sum3 + w[i]*x[i]**2
+        sq_sum4 = sq_sum4 + w[i]
+        sq_sum5 = sq_sum5 + w[i]**2
+                   
+    xbar = sq_sum1/sq_sum2
+    delta_xbar = np.sqrt((np.abs(sq_sum3/sq_sum2 - xbar**2))*
+                             sq_sum5/(sq_sum4**2-sq_sum5))
+    
+    neff = sq_sum4**2/sq_sum5
+    print("Effective N_dof = ",neff)
+    
+    factor = np.sqrt((neff-1.0)/(len(x)-1))
+    print("Correction factor = ",factor)
+    
+    return xbar,delta_xbar
 
 
 def set_dark_mode(dark_mode = True):
