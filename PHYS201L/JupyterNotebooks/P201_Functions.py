@@ -376,7 +376,7 @@ def weighted_average(x,deltax,etype):
         sq_sum4 = sq_sum4 + w[i]
         sq_sum5 = sq_sum5 + w[i]**2
                    
-    xbar = sq_sum1/sq_sum2
+    xbar_stat = sq_sum1/sq_sum2
     delta_xbar = np.sqrt((np.abs(sq_sum3/sq_sum2 - xbar**2))*
                              sq_sum5/(sq_sum4**2-sq_sum5))
     
