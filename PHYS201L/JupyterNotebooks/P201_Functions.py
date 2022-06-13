@@ -21,8 +21,8 @@ def constant_fit_plot_core(xi,yi,labelstring="Constant Fit",linestring="r-",plot
     ps = np.random.multivariate_normal(popt,pcov,10000)
     ysample=np.asarray([constantfitfunction(xi,*pi) for pi in ps])
 
-    lower = np.percentile(ysample,2.5,axis=0)
-    upper = np.percentile(ysample,97.5,axis=0)
+    lower = np.percentile(ysample,16.0,axis=0)
+    upper = np.percentile(ysample,84.0,axis=0)
     middle = (lower+upper)/2.0
 
     print("%s: Coefficients (from curve_fit)" % labelstring)
@@ -77,8 +77,8 @@ def constant_fit_plot_errors_core(xi,yi,sigmai,labelstring="Constant Fit",linest
     
     #print(ps,ysample)
 
-    lowerc = np.percentile(ysample,2.5,axis=0)
-    upperc = np.percentile(ysample,97.5,axis=0)
+    lowerc = np.percentile(ysample,16.0,axis=0)
+    upperc = np.percentile(ysample,84.0,axis=0)
     middlec = (lowerc+upperc)/2.0
     
     lower = [lowerc for i in range(len(xi))]
@@ -141,8 +141,8 @@ def linear_fit_plot_core(xi,yi,labelstring="Linear Fit",linestring="r-",plot_nam
     ps = np.random.multivariate_normal(popt,pcov,10000)
     ysample=np.asarray([linearfitfunction(xi,*pi) for pi in ps])
 
-    lower = np.percentile(ysample,2.5,axis=0)
-    upper = np.percentile(ysample,97.5,axis=0)
+    lower = np.percentile(ysample,16.0,axis=0)
+    upper = np.percentile(ysample,84.0,axis=0)
     middle = (lower+upper)/2.0
 
     print("%s: Coefficients (from curve_fit)" % labelstring)
@@ -255,8 +255,8 @@ def quadratic_fit_plot_core(xi,yi,labelstring="Quadratic Fit",linestring="r-",pl
     ps = np.random.multivariate_normal(popt,pcov,10000)
     ysample=np.asarray([quadraticfitfunction(xi,*pi) for pi in ps])
 
-    lower = np.percentile(ysample,2.5,axis=0)
-    upper = np.percentile(ysample,97.5,axis=0)
+    lower = np.percentile(ysample,16.0,axis=0)
+    upper = np.percentile(ysample,84.0,axis=0)
     middle = (lower+upper)/2.0
 
     print("%s: Coefficients (from curve_fit)" % labelstring)
@@ -309,8 +309,8 @@ def quadratic_fit_plot_errors_core(xi,yi,sigmai,labelstring="Quadratic Fit",line
     ps = np.random.multivariate_normal(popt,pcov,10000)
     ysample=np.asarray([quadraticfitfunction(xi,*pi) for pi in ps])
 
-    lower = np.percentile(ysample,2.5,axis=0)
-    upper = np.percentile(ysample,97.5,axis=0)
+    lower = np.percentile(ysample,16.0,axis=0)
+    upper = np.percentile(ysample,84.0,axis=0)
     middle = (lower+upper)/2.0
 
     print("%s: Coefficients (from curve_fit)" % labelstring)
