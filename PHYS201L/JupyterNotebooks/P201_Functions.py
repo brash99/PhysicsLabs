@@ -43,6 +43,20 @@ def constant_fit_plot_core(xi,yi,labelstring="Constant Fit",linestring="r-",plot
     return popt[0],perr[0]
 
 def constant_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-"):
+    """
+    Fits a set of (x,y) data with a constant function, y = C.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        y-intercept, error in y-intercept
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         intercept,dintercept = constant_fit_plot_core(xi,yi,labelstring,linestring)
@@ -50,7 +64,7 @@ def constant_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Constant F
     else:
         if x_high=="":
             print ('Missing x_high parameter!!')
-            return -1000,-1000
+            return 1000,-1000
         else:
             x_data_cut = []
             y_data_cut = []
@@ -103,6 +117,21 @@ def constant_fit_plot_errors_core(xi,yi,sigmai,labelstring="Constant Fit",linest
     return popt[0],perr[0]
 
 def constant_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-"):
+    """
+    Fits a set of (x,y) data, with errors on the y values, with a constant function, y = C.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        sigmai: array of errors in the y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        y-intercept, error in y-intercept
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         intercept,dintercept = constant_fit_plot_errors_core(xi,yi,sigmai,labelstring,linestring)
@@ -163,6 +192,20 @@ def linear_fit_plot_core(xi,yi,labelstring="Linear Fit",linestring="r-",plot_nam
     return popt[0],popt[1],perr[0],perr[1]
 
 def linear_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-"):
+    """
+    Fits a set of (x,y) data with a linear function, y = mx + b.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        y-intercept, slope, error in y-intercept, error in slope
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         intercept,slope,dintercept,dslope = linear_fit_plot_core(xi,yi,labelstring,linestring)
@@ -217,6 +260,21 @@ def linear_fit_plot_errors_core(xi,yi,sigmai,labelstring="Linear Fit",linestring
     return popt[0],popt[1],perr[0],perr[1]
 
 def linear_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-"):
+    """
+    Fits a set of (x,y) data, with errors on the y values, with a linear function, y = mx + b.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        sigmai: array of errors in the y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        y-intercept, slope, error in y-intercept, error in slope
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         intercept,slope,dintercept,dslope = linear_fit_plot_errors_core(xi,yi,sigmai,labelstring,linestring)
@@ -277,6 +335,20 @@ def quadratic_fit_plot_core(xi,yi,labelstring="Quadratic Fit",linestring="r-",pl
     return popt[2],popt[1],popt[0],perr[2],perr[1],perr[0]
            
 def quadratic_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-"):
+    """
+    Fits a set of (x,y) data with a quadratic function, y = ax^2 + bx + c.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        a,b,c,error in a, error in b, error in c
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         a,b,c,da,db,dc = quadratic_fit_plot_core(xi,yi,labelstring,linestring,plot_name)
@@ -331,6 +403,21 @@ def quadratic_fit_plot_errors_core(xi,yi,sigmai,labelstring="Quadratic Fit",line
     return popt[2],popt[1],popt[0],perr[2],perr[1],perr[0]
            
 def quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-"):
+    """
+    Fits a set of (x,y) data, with errors on the y values, with a quadratic function, y = ax^2 + bx + c.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        sigmai: array of errors in the y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        a,b,c,error in a, error in b, error in c
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         a,b,c,da,db,dc = quadratic_fit_plot_errors_core(xi,yi,sigmai,labelstring,linestring,plot_name)
@@ -356,6 +443,17 @@ def quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstr
             return a,b,c,da,db,dc
         
 def weighted_average(x,deltax,etype):
+    """
+    Calculate the weighted average, along with statistical, systematic, and total error
+    in the weighted average, for an array of values with uncertainties.
+    
+    Arguments:
+        x: array of values
+        deltax: array of uncertainties in the values
+        etype: error type ... 1=uniform, 2=Gaussian
+    Returns
+        x_bar, dx_bar_statistical, dx_bar_systematic, dx_bar
+    """
     
     if (etype == 1):
         w = 1/deltax
