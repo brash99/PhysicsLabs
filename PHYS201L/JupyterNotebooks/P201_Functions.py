@@ -1,3 +1,20 @@
+"""
+This module contains the following functions:
+
+constant_fit_plot()
+constant_fit_plot_errors()
+
+linear_fit_plot()
+linear_fit_plot_errors()
+
+quadratic_fit_plot()
+quadratic_fit_plot_errors()
+
+weighted_average()
+set_dark_mode()
+
+More information on each of these functions are included in their function-specific docstrings!
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -44,6 +61,8 @@ def constant_fit_plot_core(xi,yi,labelstring="Constant Fit",linestring="r-",plot
 
 def constant_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-"):
     """
+    constant_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-")
+    
     Fits a set of (x,y) data with a constant function, y = C.
     
     Arguments:
@@ -118,6 +137,8 @@ def constant_fit_plot_errors_core(xi,yi,sigmai,labelstring="Constant Fit",linest
 
 def constant_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-"):
     """
+    constant_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-")
+    
     Fits a set of (x,y) data, with errors on the y values, with a constant function, y = C.
     
     Arguments:
@@ -193,6 +214,8 @@ def linear_fit_plot_core(xi,yi,labelstring="Linear Fit",linestring="r-",plot_nam
 
 def linear_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-"):
     """
+    linear_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-")
+    
     Fits a set of (x,y) data with a linear function, y = mx + b.
     
     Arguments:
@@ -261,6 +284,8 @@ def linear_fit_plot_errors_core(xi,yi,sigmai,labelstring="Linear Fit",linestring
 
 def linear_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-"):
     """
+    linear_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-")
+    
     Fits a set of (x,y) data, with errors on the y values, with a linear function, y = mx + b.
     
     Arguments:
@@ -336,6 +361,8 @@ def quadratic_fit_plot_core(xi,yi,labelstring="Quadratic Fit",linestring="r-",pl
            
 def quadratic_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-"):
     """
+    quadratic_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-")
+    
     Fits a set of (x,y) data with a quadratic function, y = ax^2 + bx + c.
     
     Arguments:
@@ -404,6 +431,8 @@ def quadratic_fit_plot_errors_core(xi,yi,sigmai,labelstring="Quadratic Fit",line
            
 def quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-"):
     """
+    quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-")
+    
     Fits a set of (x,y) data, with errors on the y values, with a quadratic function, y = ax^2 + bx + c.
     
     Arguments:
@@ -444,6 +473,8 @@ def quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstr
         
 def weighted_average(x,deltax,etype):
     """
+    weighted_average(x,deltax,etype)
+    
     Calculate the weighted average, along with statistical, systematic, and total error
     in the weighted average, for an array of values with uncertainties.
     
@@ -490,6 +521,16 @@ def weighted_average(x,deltax,etype):
     return xbar,delta_xbar_stat,delta_xbar_syst,delta_xbar
 
 def set_dark_mode(dark_mode = True):
+    """
+    set_dark_mode(dark_mode = True)
+    
+    Turns on/off dark mode!
+    
+    Arguments:
+        dark_mode: boolean -> True or False
+    Returns
+        Nothing!
+    """
     if (dark_mode):
         from jupyterthemes import jtplot
         jtplot.style(theme='monokai', context='notebook', ticks=True, grid=False)
