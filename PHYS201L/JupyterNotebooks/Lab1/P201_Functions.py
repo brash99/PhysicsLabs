@@ -1,3 +1,20 @@
+"""
+This module contains the following functions:
+
+constant_fit_plot()
+constant_fit_plot_errors()
+
+linear_fit_plot()
+linear_fit_plot_errors()
+
+quadratic_fit_plot()
+quadratic_fit_plot_errors()
+
+weighted_average()
+set_dark_mode()
+
+More information on each of these functions are included in their function-specific docstrings!
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -21,8 +38,8 @@ def constant_fit_plot_core(xi,yi,labelstring="Constant Fit",linestring="r-",plot
     ps = np.random.multivariate_normal(popt,pcov,10000)
     ysample=np.asarray([constantfitfunction(xi,*pi) for pi in ps])
 
-    lower = np.percentile(ysample,2.5,axis=0)
-    upper = np.percentile(ysample,97.5,axis=0)
+    lower = np.percentile(ysample,16.0,axis=0)
+    upper = np.percentile(ysample,84.0,axis=0)
     middle = (lower+upper)/2.0
 
     print("%s: Coefficients (from curve_fit)" % labelstring)
@@ -43,6 +60,22 @@ def constant_fit_plot_core(xi,yi,labelstring="Constant Fit",linestring="r-",plot
     return popt[0],perr[0]
 
 def constant_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-"):
+    """
+    constant_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-")
+    
+    Fits a set of (x,y) data with a constant function, y = C.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        y-intercept, error in y-intercept
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         intercept,dintercept = constant_fit_plot_core(xi,yi,labelstring,linestring)
@@ -50,7 +83,7 @@ def constant_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Constant F
     else:
         if x_high=="":
             print ('Missing x_high parameter!!')
-            return -1000,-1000
+            return 1000,-1000
         else:
             x_data_cut = []
             y_data_cut = []
@@ -77,8 +110,8 @@ def constant_fit_plot_errors_core(xi,yi,sigmai,labelstring="Constant Fit",linest
     
     #print(ps,ysample)
 
-    lowerc = np.percentile(ysample,2.5,axis=0)
-    upperc = np.percentile(ysample,97.5,axis=0)
+    lowerc = np.percentile(ysample,16.0,axis=0)
+    upperc = np.percentile(ysample,84.0,axis=0)
     middlec = (lowerc+upperc)/2.0
     
     lower = [lowerc for i in range(len(xi))]
@@ -103,6 +136,23 @@ def constant_fit_plot_errors_core(xi,yi,sigmai,labelstring="Constant Fit",linest
     return popt[0],perr[0]
 
 def constant_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-"):
+    """
+    constant_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Constant Fit",linestring="r-")
+    
+    Fits a set of (x,y) data, with errors on the y values, with a constant function, y = C.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        sigmai: array of errors in the y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        y-intercept, error in y-intercept
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         intercept,dintercept = constant_fit_plot_errors_core(xi,yi,sigmai,labelstring,linestring)
@@ -141,8 +191,8 @@ def linear_fit_plot_core(xi,yi,labelstring="Linear Fit",linestring="r-",plot_nam
     ps = np.random.multivariate_normal(popt,pcov,10000)
     ysample=np.asarray([linearfitfunction(xi,*pi) for pi in ps])
 
-    lower = np.percentile(ysample,2.5,axis=0)
-    upper = np.percentile(ysample,97.5,axis=0)
+    lower = np.percentile(ysample,16.0,axis=0)
+    upper = np.percentile(ysample,84.0,axis=0)
     middle = (lower+upper)/2.0
 
     print("%s: Coefficients (from curve_fit)" % labelstring)
@@ -163,6 +213,22 @@ def linear_fit_plot_core(xi,yi,labelstring="Linear Fit",linestring="r-",plot_nam
     return popt[0],popt[1],perr[0],perr[1]
 
 def linear_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-"):
+    """
+    linear_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-")
+    
+    Fits a set of (x,y) data with a linear function, y = mx + b.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        y-intercept, slope, error in y-intercept, error in slope
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         intercept,slope,dintercept,dslope = linear_fit_plot_core(xi,yi,labelstring,linestring)
@@ -217,6 +283,23 @@ def linear_fit_plot_errors_core(xi,yi,sigmai,labelstring="Linear Fit",linestring
     return popt[0],popt[1],perr[0],perr[1]
 
 def linear_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-"):
+    """
+    linear_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Linear Fit",linestring="r-")
+    
+    Fits a set of (x,y) data, with errors on the y values, with a linear function, y = mx + b.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        sigmai: array of errors in the y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        y-intercept, slope, error in y-intercept, error in slope
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         intercept,slope,dintercept,dslope = linear_fit_plot_errors_core(xi,yi,sigmai,labelstring,linestring)
@@ -255,8 +338,8 @@ def quadratic_fit_plot_core(xi,yi,labelstring="Quadratic Fit",linestring="r-",pl
     ps = np.random.multivariate_normal(popt,pcov,10000)
     ysample=np.asarray([quadraticfitfunction(xi,*pi) for pi in ps])
 
-    lower = np.percentile(ysample,2.5,axis=0)
-    upper = np.percentile(ysample,97.5,axis=0)
+    lower = np.percentile(ysample,16.0,axis=0)
+    upper = np.percentile(ysample,84.0,axis=0)
     middle = (lower+upper)/2.0
 
     print("%s: Coefficients (from curve_fit)" % labelstring)
@@ -277,6 +360,22 @@ def quadratic_fit_plot_core(xi,yi,labelstring="Quadratic Fit",linestring="r-",pl
     return popt[2],popt[1],popt[0],perr[2],perr[1],perr[0]
            
 def quadratic_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-"):
+    """
+    quadratic_fit_plot(xi,yi,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-")
+    
+    Fits a set of (x,y) data with a quadratic function, y = ax^2 + bx + c.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        a,b,c,error in a, error in b, error in c
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         a,b,c,da,db,dc = quadratic_fit_plot_core(xi,yi,labelstring,linestring,plot_name)
@@ -309,8 +408,8 @@ def quadratic_fit_plot_errors_core(xi,yi,sigmai,labelstring="Quadratic Fit",line
     ps = np.random.multivariate_normal(popt,pcov,10000)
     ysample=np.asarray([quadraticfitfunction(xi,*pi) for pi in ps])
 
-    lower = np.percentile(ysample,2.5,axis=0)
-    upper = np.percentile(ysample,97.5,axis=0)
+    lower = np.percentile(ysample,16.0,axis=0)
+    upper = np.percentile(ysample,84.0,axis=0)
     middle = (lower+upper)/2.0
 
     print("%s: Coefficients (from curve_fit)" % labelstring)
@@ -331,6 +430,23 @@ def quadratic_fit_plot_errors_core(xi,yi,sigmai,labelstring="Quadratic Fit",line
     return popt[2],popt[1],popt[0],perr[2],perr[1],perr[0]
            
 def quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-"):
+    """
+    quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstring="Quadratic Fit",linestring="r-")
+    
+    Fits a set of (x,y) data, with errors on the y values, with a quadratic function, y = ax^2 + bx + c.
+    
+    Arguments:
+        xi: array of x values
+        yi: array of y values
+        sigmai: array of errors in the y values
+        plot_name: matlibpolot.pylot plot name
+        x_low: lower x limit of fit (optional)
+        x_high: upper x limit of fit (optional)
+        label_string: Label for plotted data (optional)
+        line_string: Python plotting code for plot symbol and color (optional)
+    Returns:
+        a,b,c,error in a, error in b, error in c
+    """
     if x_low=="":
         # Takes the x and y values to make a trendline
         a,b,c,da,db,dc = quadratic_fit_plot_errors_core(xi,yi,sigmai,labelstring,linestring,plot_name)
@@ -356,6 +472,19 @@ def quadratic_fit_plot_errors(xi,yi,sigmai,plot_name,x_low="",x_high="",labelstr
             return a,b,c,da,db,dc
         
 def weighted_average(x,deltax,etype):
+    """
+    weighted_average(x,deltax,etype)
+    
+    Calculate the weighted average, along with statistical, systematic, and total error
+    in the weighted average, for an array of values with uncertainties.
+    
+    Arguments:
+        x: array of values
+        deltax: array of uncertainties in the values
+        etype: error type ... 1=uniform, 2=Gaussian
+    Returns
+        x_bar, dx_bar_statistical, dx_bar_systematic, dx_bar
+    """
     
     if (etype == 1):
         w = 1/deltax
@@ -377,52 +506,31 @@ def weighted_average(x,deltax,etype):
         sq_sum5 = sq_sum5 + w[i]**2
                    
     xbar = sq_sum1/sq_sum2
-    delta_xbar = np.sqrt((np.abs(sq_sum3/sq_sum2 - xbar**2))*
-                             sq_sum5/(sq_sum4**2-sq_sum5))
-    
-    neff = sq_sum4**2/sq_sum5
-    print("Effective N_dof = ",neff)
-    
-    factor = np.sqrt((neff-1.0)/(len(x)-1))
-    print("Correction factor = ",factor)
-    
-    return xbar,delta_xbar
-
-def weighted_average_full(x,deltax,etype):
+    delta_xbar_stat = np.sqrt((np.abs(sq_sum3/sq_sum2 - xbar**2))/(len(x)-1))
     
     if (etype == 1):
-        w = 1/deltax
+        delta_xbar_syst = len(x)/sq_sum2
     else:
-        w = 1/deltax**2
+        delta_xbar_syst = np.sqrt(len(x))/sq_sum2
+        
+    if (etype==1):
+        delta_xbar = delta_xbar_stat+delta_xbar_syst
+    else:
+        delta_xbar = np.sqrt(delta_xbar_stat**2+delta_xbar_syst**2)
     
-    # calculate the statistically weighted average of density
-    sq_sum1 = 0.0
-    sq_sum2 = 0.0
-    sq_sum3 = 0.0
-    sq_sum4 = 0.0
-    sq_sum5 = 0.0
-    
-    for i in range(len(x)):
-        sq_sum1 = sq_sum1 + w[i]*x[i]
-        sq_sum2 = sq_sum2 + w[i]
-        sq_sum3 = sq_sum3 + w[i]*x[i]**2
-        sq_sum4 = sq_sum4 + w[i]
-        sq_sum5 = sq_sum5 + w[i]**2
-                   
-    xbar = sq_sum1/sq_sum2
-    delta_xbar = np.sqrt((np.abs(sq_sum3/sq_sum2 - xbar**2))*
-                             sq_sum5/(sq_sum4**2-sq_sum5))
-    
-    neff = sq_sum4**2/sq_sum5
-    print("Effective N_dof = ",neff)
-    
-    factor = np.sqrt((neff-1.0)/(len(x)-1))
-    print("Correction factor = ",factor)
-    
-    return xbar,delta_xbar,neff,factor
-
+    return xbar,delta_xbar_stat,delta_xbar_syst,delta_xbar
 
 def set_dark_mode(dark_mode = True):
+    """
+    set_dark_mode(dark_mode = True)
+    
+    Turns on/off dark mode!
+    
+    Arguments:
+        dark_mode: boolean -> True or False
+    Returns
+        Nothing!
+    """
     if (dark_mode):
         from jupyterthemes import jtplot
         jtplot.style(theme='monokai', context='notebook', ticks=True, grid=False)
