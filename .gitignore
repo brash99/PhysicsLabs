@@ -24,3 +24,6 @@ Templates/.ipynb_checkpoints/*
 Demo files/.ipynb_checkpoints/*
 Untitled*.ipynb
 __pycache__
+
+# Private course grading records; never publish to student-facing repositories.
+private_grading/
