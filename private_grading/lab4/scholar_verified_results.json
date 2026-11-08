@@ -1,0 +1,151 @@
+{
+  "verified_date": "2026-10-26",
+  "notebook_posted_count": 15,
+  "effort_posted_count": 17,
+  "students": [
+    {
+      "student": "Aidan Rabourdin",
+      "team": "Labradors",
+      "notebook_grade": 89,
+      "notebook_posted": true,
+      "effort_grade": 92,
+      "effort_posted": true
+    },
+    {
+      "student": "Alivia Teri",
+      "team": "Team LTH",
+      "notebook_grade": 88,
+      "notebook_posted": true,
+      "effort_grade": 98,
+      "effort_posted": true
+    },
+    {
+      "student": "Aston French",
+      "team": "Team LTH",
+      "notebook_grade": 88,
+      "notebook_posted": true,
+      "effort_grade": 93,
+      "effort_posted": true
+    },
+    {
+      "student": "Brandon Banks",
+      "team": "Science Guys",
+      "notebook_grade": 89,
+      "notebook_posted": true,
+      "effort_grade": 97,
+      "effort_posted": true
+    },
+    {
+      "student": "Christina McDonald",
+      "team": "Gurl Power",
+      "notebook_grade": 87,
+      "notebook_posted": true,
+      "effort_grade": 98,
+      "effort_posted": true
+    },
+    {
+      "student": "Georg Harsh",
+      "team": "Labradors",
+      "notebook_grade": 89,
+      "notebook_posted": true,
+      "effort_grade": 92,
+      "effort_posted": true
+    },
+    {
+      "student": "Jacob Rojas",
+      "team": "Science Guys",
+      "notebook_grade": 89,
+      "notebook_posted": true,
+      "effort_grade": 95,
+      "effort_posted": true
+    },
+    {
+      "student": "Joshua Bonta Reavis",
+      "team": "Team LTH",
+      "notebook_grade": 88,
+      "notebook_posted": true,
+      "effort_grade": 95,
+      "effort_posted": true
+    },
+    {
+      "student": "Kaiden Brewer",
+      "team": "B6",
+      "notebook_grade": null,
+      "notebook_posted": false,
+      "effort_grade": 99,
+      "effort_posted": true
+    },
+    {
+      "student": "Kaylin Church",
+      "team": "Gurl Power",
+      "notebook_grade": 87,
+      "notebook_posted": true,
+      "effort_grade": 98,
+      "effort_posted": true
+    },
+    {
+      "student": "Keith Davis",
+      "team": "Science Guys",
+      "notebook_grade": 89,
+      "notebook_posted": true,
+      "effort_grade": 88,
+      "effort_posted": true
+    },
+    {
+      "student": "Kieden Morgan",
+      "team": "Labradors",
+      "notebook_grade": 89,
+      "notebook_posted": true,
+      "effort_grade": 96,
+      "effort_posted": true
+    },
+    {
+      "student": "Lucas Tyree-Herrmann",
+      "team": "Team LTH",
+      "notebook_grade": 88,
+      "notebook_posted": true,
+      "effort_grade": 96,
+      "effort_posted": true
+    },
+    {
+      "student": "Lucas Wienhoff",
+      "team": "B6",
+      "notebook_grade": null,
+      "notebook_posted": false,
+      "effort_grade": 98,
+      "effort_posted": true
+    },
+    {
+      "student": "Lucianna Petrakos",
+      "team": "Gurl Power",
+      "notebook_grade": 87,
+      "notebook_posted": true,
+      "effort_grade": 92,
+      "effort_posted": true
+    },
+    {
+      "student": "Myles Hendler-Voss",
+      "team": "B6",
+      "notebook_grade": null,
+      "notebook_posted": false,
+      "effort_grade": 90,
+      "effort_posted": true
+    },
+    {
+      "student": "Qais Safiullah",
+      "team": "Labradors",
+      "notebook_grade": 89,
+      "notebook_posted": true,
+      "effort_grade": 94,
+      "effort_posted": true
+    },
+    {
+      "student": "Treshun Bradley",
+      "team": "Science Guys",
+      "notebook_grade": 89,
+      "notebook_posted": true,
+      "effort_grade": null,
+      "effort_posted": false
+    }
+  ]
+}

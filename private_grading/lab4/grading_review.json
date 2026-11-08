@@ -1,0 +1,556 @@
+{
+  "status": "Completed entries posted in Scholar; B6 notebook grades and Treshun Bradley effort-report grade remain blank.",
+  "scope": "Five team notebooks; 17 submitted individual reports; one missing individual report.",
+  "method": "Course seven-criterion notebook rubric; prior Lab 3 feedback style inspected. Effort scores are provisional holistic judgments of completeness and specificity; no separate numerical effort-report rubric was located.",
+  "instructor_decisions": [
+    "Initial team scores are withdrawn. B6 is pending clarification of whether a separate report or oral discussion was provided; do not assign the original 57.",
+    "Questions 1–3 excluded provisionally based on an explicit student note about an instructor waiver; user clarification requested and pending.",
+    "No automatic late penalty. Instructor must decide exceptions for reports timestamped after the deadline.",
+    "No participation-based team-grade adjustments recommended solely from peer estimates. Final decisions remain with instructor.",
+    "Gurl Power notebook located in public fork, commit f9ab948cb685e09bd0b31de368d777c593ab19ac, saved October 19, 2026 at 8:08:50 p.m. EDT; no Scholar team submission. Credit proposed for the actual saved work; request the URL submission.",
+    "Treshun Bradley report missing; leave pending rather than assigning an automatic zero."
+  ],
+  "source_notes": [
+    "Lab 3 overall team feedback and report feedback inspected directly in Scholar; individual team grades were copied to non-submitting teammates via overrides in Lab 3.",
+    "Submitted attachments for B6, Science Guys, and Team LTH have the same source cells as the public saved notebooks at review time.",
+    "Labradors supplemental ZIP contains another copy of the same written report; both attachments reviewed.",
+    "Jacob Rojas report read through the Google Drive connector from https://docs.google.com/document/d/17pbFqBeJrkSMoN1Oe48W2yEN68oQ7EjQ9eidU2iqj-4/edit.",
+    "PDF text, PDF annotations, and handwritten content reviewed; typed PDF text alone omitted several completed forms.",
+    "All five notebooks executed in isolation from one another after source inspection, using installed dependencies; student originals were not edited. Ten regenerated figures inspected.",
+    "Supplied helper code treats shared flag calibration as independent and the supplied fit weights only vertical errors; these inherited limitations are not student coding deductions. Formal significance claims from those fit errors are limited."
+  ],
+  "teams": [
+    {
+      "team": "B6",
+      "file": "Myles_B6",
+      "submitter": "Myles Hendler-Voss",
+      "members": [
+        "Myles Hendler-Voss",
+        "Lucas Wienhoff",
+        "Kaiden Brewer"
+      ],
+      "scores": null,
+      "reasons": [
+        "The supplied model and expected slope are correct, but there is no student explanation connecting the predictions to the final results.",
+        "Both sets of five distinct configurations and five trials per configuration are present. The team-specific procedure is absent; heavy hanging masses subtract an unexplained 0.169 kg tare. Light configuration 4 is appended five times, producing nine fitted entries from only five distinct configurations.",
+        "Code runs and calculated results reproduce. Repeated copies of light configuration 4 incorrectly reweight the fit. The velocity correction uses 0.0118/0.05 although flag_length is 0.01165 m; explain the calibration and use consistent values. This is not a deduction for applying a calibration correction itself.",
+        "Numerical uncertainties and comparisons are produced, but instrument choices and compatibility values are not explained. Reported light and heavy slopes are 0.18930 ± 0.00011 and 0.29654 ± 0.00019 kg versus masses 0.20013 and 0.30061 kg.",
+        "Both labeled, reproducible figures and trial tables are saved. Repeated configurations distort the light-fit weighting and need removal; no student captions or explanation are supplied.",
+        "Both checkpoints, the report, conclusion, and Question 4 remain unanswered template prompts. Existing calculations are credited separately; an unfilled prompt is not a conclusion.",
+        "Team and dates are present, but only first names, repeated cells, and unfilled report prompts make the notebook difficult to audit."
+      ],
+      "feedback": "Your notebook runs and preserves the measurements for both cart series, but it is not yet a complete report: both checkpoints, the procedure, interpretation, conclusion, and photogate response remain unfilled. Remove the four extra copies of light-cart setup 4; they give the same measurements extra weight in the fit. Explain the velocity conversion and use one consistent flag length, and document the 0.169 kg tare subtracted from the heavy hanging-mass entries. Compare both fitted masses and nonzero intercepts quantitatively with their reported uncertainties. The public saved notebook matches the submitted attachment.",
+      "score": null,
+      "sha256": "c02b488be73d0510405ba92933bca6fb4d830a3a3bb05710bfacb63cbd310a9e",
+      "rubric": [
+        {
+          "criterion": "Purpose, model, and prediction",
+          "maximum": 10,
+          "score": null,
+          "reason": "The supplied model and expected slope are correct, but there is no student explanation connecting the predictions to the final results."
+        },
+        {
+          "criterion": "Experimental methods and data integrity",
+          "maximum": 15,
+          "score": null,
+          "reason": "Both sets of five distinct configurations and five trials per configuration are present. The team-specific procedure is absent; heavy hanging masses subtract an unexplained 0.169 kg tare. Light configuration 4 is appended five times, producing nine fitted entries from only five distinct configurations."
+        },
+        {
+          "criterion": "Calculations and computational analysis",
+          "maximum": 20,
+          "score": null,
+          "reason": "Code runs and calculated results reproduce. Repeated copies of light configuration 4 incorrectly reweight the fit. The velocity correction uses 0.0118/0.05 although flag_length is 0.01165 m; explain the calibration and use consistent values. This is not a deduction for applying a calibration correction itself."
+        },
+        {
+          "criterion": "Uncertainty analysis and quantitative comparison",
+          "maximum": 20,
+          "score": null,
+          "reason": "Numerical uncertainties and comparisons are produced, but instrument choices and compatibility values are not explained. Reported light and heavy slopes are 0.18930 ± 0.00011 and 0.29654 ± 0.00019 kg versus masses 0.20013 and 0.30061 kg."
+        },
+        {
+          "criterion": "Tables, figures, and presentation of evidence",
+          "maximum": 15,
+          "score": null,
+          "reason": "Both labeled, reproducible figures and trial tables are saved. Repeated configurations distort the light-fit weighting and need removal; no student captions or explanation are supplied."
+        },
+        {
+          "criterion": "Interpretation and conclusions",
+          "maximum": 15,
+          "score": null,
+          "reason": "Both checkpoints, the report, conclusion, and Question 4 remain unanswered template prompts. Existing calculations are credited separately; an unfilled prompt is not a conclusion."
+        },
+        {
+          "criterion": "Scientific communication and reproducibility",
+          "maximum": 5,
+          "score": null,
+          "reason": "Team and dates are present, but only first names, repeated cells, and unfilled report prompts make the notebook difficult to audit."
+        }
+      ],
+      "status": "Pending clarification: separate written report or oral discussion",
+      "initial_score_withdrawn": 57
+    },
+    {
+      "team": "Science Guys",
+      "file": "Jacob_Science_Guys",
+      "submitter": "Jacob Rojas",
+      "members": [
+        "Jacob Rojas",
+        "Keith Davis",
+        "Treshun Bradley",
+        "Brandon Banks"
+      ],
+      "scores": [
+        10,
+        14,
+        19,
+        17,
+        15,
+        10,
+        4
+      ],
+      "reasons": [
+        "Correct model, predictions, and expected slope are retained and linked to both cart series.",
+        "Fifty raw trials and a team-specific procedure are supplied. Explain the light-series velocity rescaling, the Capstone setting it corrects, instrument uncertainty choices, and gate/release geometry.",
+        "All calculations reproduce and both data series are complete. The roughly factor-two slope/mass mismatch is not diagnosed before reporting agreement. Credit is retained for executable calculations even though results disagree with theory.",
+        "Propagated uncertainties are printed, but comparisons are misinterpreted. Light acceleration discrepancy values are 59–130 and heavy values 41–106 using the supplied uncertainty model. The intercepts 0.00439 ± 0.00005 N and −0.00195 ± 0.00005 N are not consistent with zero on those reported errors.",
+        "Both figures and all raw trial tables are present, readable, labeled, and reproducible; captions/discussion could be more informative.",
+        "The report recognizes slope disagreement but calls very large differences slight, contradicts the acceleration results, and treats repeated trials as eliminating systematic error. Photogates time electronically; human reaction time is not the timing mechanism here. The average-speed portion of Question 4 is correct, but finite flag length needs a physical explanation.",
+        "Full team identification and outputs are present. Unfilled prompts, grammar, and contradictory claims remain."
+      ],
+      "feedback": "Your notebook runs successfully, includes all 50 raw trials, and gives a useful account of the data collection. The conclusion needs to follow the numerical evidence: the fitted slopes are 0.40280 kg versus a 0.19059 kg light cart and 0.55034 kg versus a 0.29098 kg heavy cart, differences of 111% and 89%. Neither intercept is consistent with zero within the reported fit uncertainty, and the large acceleration discrepancy values contradict the claim of agreement. Explain the light-series velocity rescaling and investigate a calibration or setup bias. Repetition reduces random scatter, not systematic error; the photogates measure time electronically. Explain that a finite flag makes the gate average speed over its passage.",
+      "score": 89,
+      "sha256": "1c254ad945394a9059125a1651e3852faed0e7e57ac072b9ce278fdf2ed8579c",
+      "rubric": [
+        {
+          "criterion": "Purpose, model, and prediction",
+          "maximum": 10,
+          "score": 10,
+          "reason": "Correct model, predictions, and expected slope are retained and linked to both cart series."
+        },
+        {
+          "criterion": "Experimental methods and data integrity",
+          "maximum": 15,
+          "score": 14,
+          "reason": "Fifty raw trials and a team-specific procedure are supplied. Explain the light-series velocity rescaling, the Capstone setting it corrects, instrument uncertainty choices, and gate/release geometry."
+        },
+        {
+          "criterion": "Calculations and computational analysis",
+          "maximum": 20,
+          "score": 19,
+          "reason": "All calculations reproduce and both data series are complete. The roughly factor-two slope/mass mismatch is not diagnosed before reporting agreement. Credit is retained for executable calculations even though results disagree with theory."
+        },
+        {
+          "criterion": "Uncertainty analysis and quantitative comparison",
+          "maximum": 20,
+          "score": 17,
+          "reason": "Propagated uncertainties are printed, but comparisons are misinterpreted. Light acceleration discrepancy values are 59–130 and heavy values 41–106 using the supplied uncertainty model. The intercepts 0.00439 ± 0.00005 N and −0.00195 ± 0.00005 N are not consistent with zero on those reported errors."
+        },
+        {
+          "criterion": "Tables, figures, and presentation of evidence",
+          "maximum": 15,
+          "score": 15,
+          "reason": "Both figures and all raw trial tables are present, readable, labeled, and reproducible; captions/discussion could be more informative."
+        },
+        {
+          "criterion": "Interpretation and conclusions",
+          "maximum": 15,
+          "score": 10,
+          "reason": "The report recognizes slope disagreement but calls very large differences slight, contradicts the acceleration results, and treats repeated trials as eliminating systematic error. Photogates time electronically; human reaction time is not the timing mechanism here. The average-speed portion of Question 4 is correct, but finite flag length needs a physical explanation."
+        },
+        {
+          "criterion": "Scientific communication and reproducibility",
+          "maximum": 5,
+          "score": 4,
+          "reason": "Full team identification and outputs are present. Unfilled prompts, grammar, and contradictory claims remain."
+        }
+      ],
+      "status": "Posted in Scholar; verified",
+      "initial_score_withdrawn": 72
+    },
+    {
+      "team": "Labradors",
+      "file": "Qais",
+      "submitter": "Qais Safiullah",
+      "members": [
+        "Aidan Rabourdin",
+        "Qais Safiullah",
+        "Kieden Morgan",
+        "Georg Harsh"
+      ],
+      "scores": [
+        10,
+        13,
+        19,
+        17,
+        15,
+        11,
+        4
+      ],
+      "reasons": [
+        "Correct model and expected relationships are present. Quantitative test predictions are generated.",
+        "All 50 raw trials are present and the report mentions leveling, caliper use, a consistent release point, and a string replacement. Apparatus geometry, calibration details, and reasons for uncertainty choices are too brief for full reproduction.",
+        "All calculations run and reproduce. Mass uncertainties vary from 0.001 to 0.000001 kg without explanation, and the reported heavy slope is truncated to 0.32 rather than 0.32975 kg in the prose. No inherited helper-code defect is charged to students.",
+        "Uncertainties and discrepancy values are present but not consistently used. The light slope 0.18398 ± 0.00016 kg differs from the 0.20013 kg mass; the heavy slope is 0.32975 ± 0.00044 kg versus 0.28068 kg. Both intercepts differ from zero on the reported fit errors. The supplied vertical-error-only fit omits horizontal error and correlations, so formal significance is limited.",
+        "Readable saved figures with both-axis error bars and full trial tables. Written captions and explanation of the differing error sizes need development.",
+        "Some setup limitations are recognized and the photogate average-speed answer is correct. The conclusions contradict the slope and intercept outputs and each other; the numerical acceleration claim is not a quantitative comparison. Improvements remain generic.",
+        "Team/date identification and ordered outputs are present, but template prompts and inconsistent prose remain; notebook was renamed."
+      ],
+      "feedback": "Your notebook runs and preserves all 50 trials, both figures, and the calculated uncertainties. The report usefully notes track leveling and string problems, but its conclusions need correction. The light fitted slope is 0.18398 ± 0.00016 kg versus a measured 0.20013 kg, and the heavy slope is 0.32975 ± 0.00044 kg versus 0.28068 kg; neither agrees within the reported fit errors. Both intercepts are also nonzero on those errors. Explain the markedly different hanging-mass uncertainties and use the individual acceleration comparisons instead of an unsupported claim of agreement. State a specific corrective check for string alignment and complete the checkpoint discussion. The uncertainty model in the supplied fit has limitations; these are not charged as student coding errors.",
+      "score": 89,
+      "sha256": "08e7e594d960659ee3ecef592f0ea960997347378a5a727e9ecff68f45849300",
+      "rubric": [
+        {
+          "criterion": "Purpose, model, and prediction",
+          "maximum": 10,
+          "score": 10,
+          "reason": "Correct model and expected relationships are present. Quantitative test predictions are generated."
+        },
+        {
+          "criterion": "Experimental methods and data integrity",
+          "maximum": 15,
+          "score": 13,
+          "reason": "All 50 raw trials are present and the report mentions leveling, caliper use, a consistent release point, and a string replacement. Apparatus geometry, calibration details, and reasons for uncertainty choices are too brief for full reproduction."
+        },
+        {
+          "criterion": "Calculations and computational analysis",
+          "maximum": 20,
+          "score": 19,
+          "reason": "All calculations run and reproduce. Mass uncertainties vary from 0.001 to 0.000001 kg without explanation, and the reported heavy slope is truncated to 0.32 rather than 0.32975 kg in the prose. No inherited helper-code defect is charged to students."
+        },
+        {
+          "criterion": "Uncertainty analysis and quantitative comparison",
+          "maximum": 20,
+          "score": 17,
+          "reason": "Uncertainties and discrepancy values are present but not consistently used. The light slope 0.18398 ± 0.00016 kg differs from the 0.20013 kg mass; the heavy slope is 0.32975 ± 0.00044 kg versus 0.28068 kg. Both intercepts differ from zero on the reported fit errors. The supplied vertical-error-only fit omits horizontal error and correlations, so formal significance is limited."
+        },
+        {
+          "criterion": "Tables, figures, and presentation of evidence",
+          "maximum": 15,
+          "score": 15,
+          "reason": "Readable saved figures with both-axis error bars and full trial tables. Written captions and explanation of the differing error sizes need development."
+        },
+        {
+          "criterion": "Interpretation and conclusions",
+          "maximum": 15,
+          "score": 11,
+          "reason": "Some setup limitations are recognized and the photogate average-speed answer is correct. The conclusions contradict the slope and intercept outputs and each other; the numerical acceleration claim is not a quantitative comparison. Improvements remain generic."
+        },
+        {
+          "criterion": "Scientific communication and reproducibility",
+          "maximum": 5,
+          "score": 4,
+          "reason": "Team/date identification and ordered outputs are present, but template prompts and inconsistent prose remain; notebook was renamed."
+        }
+      ],
+      "status": "Posted in Scholar; verified",
+      "initial_score_withdrawn": 71
+    },
+    {
+      "team": "Team LTH",
+      "file": "Lucas",
+      "submitter": "Lucas Tyree-Herrmann",
+      "members": [
+        "Lucas Tyree-Herrmann",
+        "Aston French",
+        "Alivia Teri",
+        "Joshua Bonta Reavis"
+      ],
+      "scores": [
+        10,
+        14,
+        18,
+        17,
+        15,
+        10,
+        4
+      ],
+      "reasons": [
+        "The correct cart–hanger model is present. The heavy-checkpoint explanation reverses the expected mass dependence of the tension-versus-acceleration slope.",
+        "Complete trial arrays and a team-specific procedure identify leveling and sensor problems. The velocity scaling and heavy hanging-mass entries require verification and a traceable calibration/tare explanation.",
+        "Code executes with saved outputs, but light/heavy velocity transformations and heavy masses near 0.11 kg are not justified. The heavy fit has slope 0.16655 kg and intercept 0.73103 N; such a large offset warrants checking mass units/tare and calibration before assigning it to friction.",
+        "Numerical uncertainties and comparisons are generated but the report calls the light result consistent despite slope 0.19713 ± 0.00016 kg versus mass 0.18975 kg. The 0.000525 ± 0.000058 N light intercept is not consistent with zero within the reported fit error. Quantify comparisons and explain uncertainty sources.",
+        "Both raw trial tables and labeled saved figures are clear and reproducible. Add informative student captions and discuss the conspicuous heavy-series offset.",
+        "The team discusses repeatability and friction and answers the finite-flag question sensibly. It overstates agreement, reverses the expected slope trend, and interprets the heavy intercept as tension created by cart mass alone. Constant resisting force appears as an offset; diagnose the data/calibration before blaming all disagreement on friction.",
+        "Full team/date identification and completed prose are present; several contradictions, unfilled instructions, and proofreading issues remain."
+      ],
+      "feedback": "Your notebook runs, preserves all trials, and documents useful leveling and sensor troubleshooting. Recheck the quantitative interpretation: the light slope 0.19713 ± 0.00016 kg is not consistent with the 0.18975 kg mass within the reported fit error, and its intercept is also nonzero on that error. The heavy fit gives 0.16655 kg with a very large 0.73103 N intercept. Verify the heavy hanging masses near 0.11 kg, any tare, and the velocity scaling before attributing this to friction. For a graph of tension versus acceleration, adding cart mass should increase the slope because T = m_cart a. Cart mass alone does not create string tension at zero acceleration. Your explanation that the photogate measures an average over a finite flag passage is a strength.",
+      "score": 88,
+      "sha256": "2872f5a7295b635573a66fed43e9529804b4c3eba320c49110082797e9bcc958",
+      "rubric": [
+        {
+          "criterion": "Purpose, model, and prediction",
+          "maximum": 10,
+          "score": 10,
+          "reason": "The correct cart–hanger model is present. The heavy-checkpoint explanation reverses the expected mass dependence of the tension-versus-acceleration slope."
+        },
+        {
+          "criterion": "Experimental methods and data integrity",
+          "maximum": 15,
+          "score": 14,
+          "reason": "Complete trial arrays and a team-specific procedure identify leveling and sensor problems. The velocity scaling and heavy hanging-mass entries require verification and a traceable calibration/tare explanation."
+        },
+        {
+          "criterion": "Calculations and computational analysis",
+          "maximum": 20,
+          "score": 18,
+          "reason": "Code executes with saved outputs, but light/heavy velocity transformations and heavy masses near 0.11 kg are not justified. The heavy fit has slope 0.16655 kg and intercept 0.73103 N; such a large offset warrants checking mass units/tare and calibration before assigning it to friction."
+        },
+        {
+          "criterion": "Uncertainty analysis and quantitative comparison",
+          "maximum": 20,
+          "score": 17,
+          "reason": "Numerical uncertainties and comparisons are generated but the report calls the light result consistent despite slope 0.19713 ± 0.00016 kg versus mass 0.18975 kg. The 0.000525 ± 0.000058 N light intercept is not consistent with zero within the reported fit error. Quantify comparisons and explain uncertainty sources."
+        },
+        {
+          "criterion": "Tables, figures, and presentation of evidence",
+          "maximum": 15,
+          "score": 15,
+          "reason": "Both raw trial tables and labeled saved figures are clear and reproducible. Add informative student captions and discuss the conspicuous heavy-series offset."
+        },
+        {
+          "criterion": "Interpretation and conclusions",
+          "maximum": 15,
+          "score": 10,
+          "reason": "The team discusses repeatability and friction and answers the finite-flag question sensibly. It overstates agreement, reverses the expected slope trend, and interprets the heavy intercept as tension created by cart mass alone. Constant resisting force appears as an offset; diagnose the data/calibration before blaming all disagreement on friction."
+        },
+        {
+          "criterion": "Scientific communication and reproducibility",
+          "maximum": 5,
+          "score": 4,
+          "reason": "Full team/date identification and completed prose are present; several contradictions, unfilled instructions, and proofreading issues remain."
+        }
+      ],
+      "status": "Posted in Scholar; verified",
+      "initial_score_withdrawn": 68
+    },
+    {
+      "team": "Gurl Power",
+      "file": "Gurl_Power",
+      "submitter": null,
+      "members": [
+        "Christina McDonald",
+        "Lucianna Petrakos",
+        "Kaylin Church"
+      ],
+      "scores": [
+        10,
+        13,
+        18,
+        17,
+        15,
+        10,
+        4
+      ],
+      "reasons": [
+        "The correct physical model and theoretical slope are present, but the report does not consistently connect them to the observed results.",
+        "All 50 raw trials are retained, including commented-out readings. The final heavy configuration uses only three trials and the guard was changed from five to three without a documented objective reason for exclusions. The team-specific procedure is brief.",
+        "Code runs and reproduces the results. The light slope 0.04339 kg versus mass 0.19146 kg suggests an unresolved velocity/calibration scale issue. The heavy slope is 0.38422 kg versus 0.29171 kg. Investigate calibration instead of calling the mismatch slight.",
+        "Uncertainties are generated but not interpreted correctly. Intercepts −0.00101 ± 0.00007 N and −0.00653 ± 0.00017 N are not consistent with zero on the reported fit errors. The prose conflicts with both the light checkpoint and computed slope/mass comparisons.",
+        "Both figures, labels, error bars, and raw measurements are saved. Better captions should explain the calibration issue and trial exclusions.",
+        "The report identifies release technique and track tilt as possible effects and recognizes averaged photogate speed. It incorrectly claims intercept consistency and sometimes slope agreement; quantitative evidence and specific diagnostic checks are missing.",
+        "Team and dates are present and the notebook runs. Prompts remain and Scholar has no team submission. No missing-submission penalty is included because a substantive public notebook was saved before the deadline."
+      ],
+      "feedback": "Your public notebook runs and contains the measurements and both labeled figures. The light fitted mass is 0.04339 kg versus a measured 0.19146 kg, so investigate the photogate velocity calibration or scaling; the heavy fitted mass is 0.38422 kg versus 0.29171 kg. Neither intercept is consistent with zero within the reported fit error, contrary to the written answers. Preserve the five final heavy-cart readings, explain any objective reason for excluding trials, and do not lower the required trial-count check simply to use fewer readings. Make the conclusion quantitative and consistent with the tables. The notebook was saved before the deadline, but the repository manager still needs to submit its GitHub URL in Scholar.",
+      "score": 87,
+      "sha256": "0f345cea6724dd5405b4e1f5f24ee5683cf11c1de1e723ef68a1c650ceb59b13",
+      "rubric": [
+        {
+          "criterion": "Purpose, model, and prediction",
+          "maximum": 10,
+          "score": 10,
+          "reason": "The correct physical model and theoretical slope are present, but the report does not consistently connect them to the observed results."
+        },
+        {
+          "criterion": "Experimental methods and data integrity",
+          "maximum": 15,
+          "score": 13,
+          "reason": "All 50 raw trials are retained, including commented-out readings. The final heavy configuration uses only three trials and the guard was changed from five to three without a documented objective reason for exclusions. The team-specific procedure is brief."
+        },
+        {
+          "criterion": "Calculations and computational analysis",
+          "maximum": 20,
+          "score": 18,
+          "reason": "Code runs and reproduces the results. The light slope 0.04339 kg versus mass 0.19146 kg suggests an unresolved velocity/calibration scale issue. The heavy slope is 0.38422 kg versus 0.29171 kg. Investigate calibration instead of calling the mismatch slight."
+        },
+        {
+          "criterion": "Uncertainty analysis and quantitative comparison",
+          "maximum": 20,
+          "score": 17,
+          "reason": "Uncertainties are generated but not interpreted correctly. Intercepts −0.00101 ± 0.00007 N and −0.00653 ± 0.00017 N are not consistent with zero on the reported fit errors. The prose conflicts with both the light checkpoint and computed slope/mass comparisons."
+        },
+        {
+          "criterion": "Tables, figures, and presentation of evidence",
+          "maximum": 15,
+          "score": 15,
+          "reason": "Both figures, labels, error bars, and raw measurements are saved. Better captions should explain the calibration issue and trial exclusions."
+        },
+        {
+          "criterion": "Interpretation and conclusions",
+          "maximum": 15,
+          "score": 10,
+          "reason": "The report identifies release technique and track tilt as possible effects and recognizes averaged photogate speed. It incorrectly claims intercept consistency and sometimes slope agreement; quantitative evidence and specific diagnostic checks are missing."
+        },
+        {
+          "criterion": "Scientific communication and reproducibility",
+          "maximum": 5,
+          "score": 4,
+          "reason": "Team and dates are present and the notebook runs. Prompts remain and Scholar has no team submission. No missing-submission penalty is included because a substantive public notebook was saved before the deadline."
+        }
+      ],
+      "status": "Posted in Scholar; verified",
+      "initial_score_withdrawn": 67
+    }
+  ],
+  "effort_reports": [
+    {
+      "student": "Aidan Rabourdin",
+      "team": "Labradors",
+      "score": 92,
+      "feedback": "Your report identifies apparatus setup, maintaining consistent conditions, and changing the hanging mass. Add your own row and percentage to the effort table: the three listed 25% shares total only 75%. Mark the relevant contribution areas and give a more specific example of a check or correction you personally made.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Alivia Teri",
+      "team": "Team LTH",
+      "score": 98,
+      "feedback": "Clear, complete report with a 100% team allocation and a specific account of checking and leveling the apparatus on the second day. Your reminder to apply lessons from the earlier measurements is a useful quality-control contribution. Add the observable result of that check for an even stronger reflection.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Aston French",
+      "team": "Team LTH",
+      "score": 93,
+      "feedback": "Your report describes measurement work, software troubleshooting, and checking the uncertainty calculations, with a complete 100% team allocation. Correct the reused lab/submission/signature dates to October 5 and October 19 as appropriate, mark your contribution areas, and identify one specific troubleshooting change and its result.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Brandon Banks",
+      "team": "Science Guys",
+      "score": 97,
+      "feedback": "Good report describing your mass measurements, cart/air-track work, and how the division of tasks helped the recorder keep up. The team allocation totals 100%, and the Lab 4 identification and dates are correct. Make the decision/check example more specific by naming a measurement or setup issue you verified.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Christina McDonald",
+      "team": "Gurl Power",
+      "score": 98,
+      "feedback": "Your report clearly describes cart setup, releasing and returning it, helping with the conclusions, and noticing unusual data and asking for help. The 33/33/34 allocation totals 100%. Name the data problem and the corrective action more precisely so the quality-control example is reproducible.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Georg Harsh",
+      "team": "Labradors",
+      "score": 92,
+      "feedback": "Useful account of GitHub/writing work and the string and weights slipping from the pulley. Correct the experiment field, which still says Lab 1: Density, to Lab 4. Add your own row/share: the three listed 25% entries total only 75%. Explain what you personally changed or checked when the string or software problem occurred.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Jacob Rojas",
+      "team": "Science Guys",
+      "score": 95,
+      "feedback": "Your linked report documents setup, recording, GitHub work, and a complete 100% contribution allocation. Correct the experiment label from Lab 3 to Lab 4. When a trial is repeated, preserve the original reading and state the objective apparatus or recording problem; a skewed result by itself is not a sufficient reason to reject a measurement.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Joshua Bonta Reavis",
+      "team": "Team LTH",
+      "score": 95,
+      "feedback": "Good specific description of measuring weights and maintaining the same cart starting position. Add your own row and estimated share to the table: the three named 25% entries total only 75%, despite the printed total. The remaining identification and certification are complete.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Kaiden Brewer",
+      "team": "B6",
+      "score": 99,
+      "feedback": "Clear, candid report with a complete 100% team allocation. You identify resetting the cart, helping the team work efficiently, and catching a data-entry typo affecting the heavy-cart graph. Naming the particular entry and corrected value would make that diagnostic example even stronger.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Kaylin Church",
+      "team": "Gurl Power",
+      "score": 98,
+      "feedback": "Detailed report with a complete 100% allocation and a clear account of recording the second set of data and transferring it to Colab/GitHub. The highlighted contribution areas are accepted as selections. Explain what was wrong in the repeated trial and preserve both the original measurement and the reason for repeating it.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Keith Davis",
+      "team": "Science Guys",
+      "score": 88,
+      "feedback": "The team table and the five-trials-per-hanging-mass check give useful Lab 4 evidence. However, your main personal-contribution paragraph still describes a projectile cannon, projectile range, a box, and paper from the prior experiment. Replace it with your actual air-track work, correct the reused September dates, and mark the contribution areas. This feedback concerns the report content, not an assumption that you did not participate.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Kieden Morgan",
+      "team": "Labradors",
+      "score": 96,
+      "feedback": "Good description of weighing, measuring, setup, conducting the experiment, and keeping the runs efficient. Add your own name, share, and contribution row: the three listed 25% shares total only 75%. An extra row or an explicit note below the table is fine.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Lucas Tyree-Herrmann",
+      "team": "Team LTH",
+      "score": 96,
+      "feedback": "Your report identifies data checking, asking for help with unusual first-set results, and a complete team allocation overall. List each member separately rather than combining two people in one 50% entry. Explain the specific problem found, the correction made, and how you verified the result.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Lucas Wienhoff",
+      "team": "B6",
+      "score": 98,
+      "feedback": "Good report identifying weight selection, sensor/calibration checks, quality control, and a complete 40/40/20 team allocation. Document the specific conversion you corrected and its effect on the results. Keep the written response within the form space or use an extra page so it remains easy to read.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Lucianna Petrakos",
+      "team": "Gurl Power",
+      "score": 92,
+      "feedback": "Your report describes leveling the track, restoring the string between trials, and contributing to the conclusion. Add your own name and percentage: the two numeric shares shown total only 67%. Clarify the current team membership and the allocation across the two meetings. It is appropriate to state honestly that a software issue was outside your contribution; add a concrete setup or consistency check you did perform.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Myles Hendler-Voss",
+      "team": "B6",
+      "score": 90,
+      "feedback": "Your report identifies data recording, track leveling, and software setup, and the effort percentages total 100%. Fill in the blank specific-contribution cells for every teammate, mark the contribution areas, and correct the submission year from 2016 to 2026. Give a more specific example of the software/setup decision you made.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Qais Safiullah",
+      "team": "Labradors",
+      "score": 94,
+      "feedback": "Your report identifies collecting measurements, recording flag/length information, and calculating uncertainties. Add your own row and share: the three listed 25% entries total only 75%. The decision/check response should describe one specific action you took and what it improved, rather than only saying everyone contributed.",
+      "status": "Posted in Scholar; verified"
+    },
+    {
+      "student": "Treshun Bradley",
+      "team": "Science Guys",
+      "score": null,
+      "feedback": "No effort-report submission is currently recorded in Scholar. Leave this result pending instructor review; do not infer nonparticipation or automatically assign a zero from the missing form.",
+      "status": "Missing — instructor decision pending"
+    }
+  ],
+  "calibration_note": "Rechecked prior Lab 3 feedback and the instructor’s observation that the lab work was generally well done. Give full credit for correctly using the supplied physical model and for complete, working tables/figures. Disagreement with ideal theory is not itself a deduction. Documented scientific weaknesses are grouped to avoid compounding the same issue across multiple criteria. Supplied helper/fit limitations are not charged to students.",
+  "b6_lab3_report_provenance": {
+    "submitter": "Myles Hendler-Voss",
+    "submitted": "2026-09-28 19:08 America/New_York",
+    "scholar_attempt_id": "_10079715_1",
+    "attachments": [
+      "Lab Report 3.pdf",
+      "Lab03_Projectile_Motion.ipynb"
+    ],
+    "report_pages": 4,
+    "pdf_title": "Lab Report 3",
+    "pdf_producer": "Skia/PDF m156 Google Docs Renderer",
+    "conclusion": "Report was attached directly to the Scholar Lab 3 team submission. PDF was generated from Google Docs; original Google Doc URL not established."
+  },
+  "user_direction": "Continue grading other teams and individual reports; leave B6 main notebook grades blank pending separate report.",
+  "b6_hold_students": [
+    "Myles Hendler-Voss",
+    "Lucas Wienhoff",
+    "Kaiden Brewer"
+  ],
+  "scholar_entry_status": {
+    "notebook": "15 individual notebook grades and team feedback posted and verified. B6: Myles Hendler-Voss, Lucas Wienhoff, and Kaiden Brewer remain blank/unposted.",
+    "effort_reports": "17 individual scores and private feedback posted and verified. Treshun Bradley remains blank/unposted."
+  }
+}
